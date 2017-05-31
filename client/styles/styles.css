@@ -1,0 +1,222 @@
+#app {
+
+}
+
+.game-canvas {
+  background: black;
+  height: 768px;
+  width:1024px;
+  display:block;
+  margin:auto;
+  margin-top:100px;
+  overflow:scroll;
+      padding: 150px;
+    box-sizing: border-box;
+}
+
+.characters {
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  pointer-events: none;
+}
+
+.character {
+  position:absolute;
+  height:20px;width:20px;
+}
+
+.character .sprite {
+  background: url(http://orig06.deviantart.net/ba81/f/2016/067/0/0/super_mario_world___mario__sprite__by_sy24-d9ue2li.png) !important;
+    background-size: 100px !important;
+    background-repeat: no-repeat !important;
+    transform: rotateX(-95deg) rotateY(-317deg) rotateZ(5deg);
+        height: 190px;
+    width: 100px;
+    position: absolute;
+    top: -130px;
+    left: -90px;
+}
+
+.character .name {
+  position:absolute;
+      transform: rotateY(45deg) rotateX(-40deg) rotateZ(-61deg);
+      -webkit-transform: rotateY(45deg) rotateX(-40deg) rotateZ(-61deg);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /*top: -40px;
+    left: -40px;*/
+        top: -140px;
+    left: -160px;
+    color: white;
+    text-transform: uppercase;
+    font-family: monospace;
+    background: black;
+    padding: 5px;
+}
+
+.game-tiles {
+  cursor:pointer;
+  display: inline-block;
+      -webkit-transform: rotateX(45deg) rotateZ(45deg);
+    -webkit-transform-style: preserve-3d;
+
+    transform: rotateX(45deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+}
+
+.game-tile-wrapper {
+  position: relative;
+  display:inline-block;
+}
+
+.game-tile-row {
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.game-tile-row:nth-child(odd) {
+
+}
+
+.game-tile-row:nth-child(even) {
+
+
+}
+
+.game-tile {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+      box-sizing: border-box;
+    border: 4px solid rgba(0, 0, 0, 0.05);
+}
+
+.game-tile:hover {
+      border: 4px solid rgba(255, 202, 0, 0.58);
+    box-sizing: border-box;
+
+}
+
+.game-tile.grass:nth-child(odd) {
+  background:url('/images/rpg/rpgTile039.png');
+}
+
+.game-tile.grass:nth-child(even) {
+  background:url('/images/rpg/rpgTile040.png');
+}
+
+.game-tile.water {
+  background:url('/images/rpg/rpgTile029.png');
+}
+
+.game-tile.waternwgrass {
+  background:url('/images/rpg/rpgTile010.png');
+}
+.game-tile.waterswgrass {
+  background:url('/images/rpg/rpgTile044.png');
+}
+.game-tile.waternegrass {
+  background:url('/images/rpg/rpgTile012.png');
+}
+.game-tile.watersegrass {
+  background:url('/images/rpg/rpgTile046.png');
+}
+.game-tile.watertgrass {
+  background:url('/images/rpg/rpgTile011.png');
+}
+.game-tile.watersgrass {
+  background:url('/images/rpg/rpgTile045.png');
+}
+.game-tile.waterlgrass {
+  background:url('/images/rpg/rpgTile028.png');
+}
+.game-tile.waterrgrass {
+  background:url('/images/rpg/rpgTile030.png');
+}
+
+.game-tile.dirt {
+  background:url('/images/rpg/rpgTile024.png');
+}
+
+ /*
+.game-tile {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  background-color: #64C7CC;
+  margin: 28.86px 0;
+  display:inline-block;
+  cursor: pointer;
+}
+
+.game-tile-img {
+    height: 150px;
+    background: url(/images/hexagonTiles/Tiles/tileGrass.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-size: 100px 150px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.game-tile-img.water {
+  background: url('/images/hexagonTiles/Tiles/tileWater_full.png');
+      background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-size: 100px 150px;
+    z-index: 1;
+    cursor: pointer;
+    height:150px;
+}
+
+.game-tile-img:hover {
+    height: 150px;
+    background: url(/images/hexagonTiles/Tiles/tileGrassHiLite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-size: 100px 150px;
+    z-index: 1;
+}
+
+.game-tile:before,
+.game-tile:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.game-tile:before {
+  bottom: 100%;
+  border-bottom: 28.86px solid #64C7CC;
+}
+
+.game-tile:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.86px solid #64C7CC;
+}
+
+body {
+  margin:0;
+}
+
+/*Portrait Mobile Media Query*/
+@media (max-width: 600px) {
+
+}
+
+/*Landscape Mobile Media Query*/
+@media only screen and (orientation : landscape) and (max-height: 400px) {
+
+}

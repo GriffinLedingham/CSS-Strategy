@@ -1,0 +1,23 @@
+<script id="gameTemplate" type="text/x-handlebars-template">
+  <div class="game-canvas">
+
+  </div>
+</script>
+
+<script id="mapTemplate" type="text/x-handlebars-template">
+  <div class="map">
+    <div class="game-tiles">
+      {{#map}}
+        <div class="game-tile-row">
+        {{#row}}
+          <div data-x="{{x}}" data-y="{{y}}" class="game-tile {{#isGrass}}grass{{/isGrass}}{{#isWater}}water{{/isWater}}{{#isDirt}}dirt{{/isDirt}}"></div>
+        {{/row}}
+        </div>
+      {{/map}}
+      <div class="characters">
+
+      </div>
+    </div>
+  </div>
+</script>
+

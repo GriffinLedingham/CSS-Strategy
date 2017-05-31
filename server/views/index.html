@@ -1,0 +1,49 @@
+<head>
+  <meta name="viewport" content="initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0;"/>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  <meta charset="utf-8">
+  <meta name="Description" CONTENT="Example Page Description">
+  <script src="/socket.io/socket.io.js"></script>
+  <title>Example Webserver Page</title>
+</head>
+<body onload="onLoad()">
+  <div id="app"></div>
+  <div id="templates"></div>
+
+  <script>
+    var app = false;
+    function start(){
+      app = new App();
+      app.init();
+    }
+
+    function error_loading(e)
+    {
+        console.error(e);
+    };
+
+    /**
+     * Intial call on page load (via body onLoad)
+     * @return {void}
+     */
+    function onLoad() {
+        var webLoad = (document.URL.indexOf("http://") || document.URL.indexOf("https://") || document.URL.indexOf("localhost") || document.URL.indexOf("127.0.0.1") );
+
+        if ( webLoad === false ) {
+            document.addEventListener("deviceready", function(){ start( true ); }, false);
+        } else {
+            if (document.readyState === 'complete' || document.readyState === 'interactive')
+            {
+                start();
+            }
+            else
+            {
+                document.addEventListener('DOMContentLoaded', start, false);
+            }
+        }
+    }
+  </script>
+  <script async src="/scripts/libs.js"></script>
+  <script async src="/scripts/game.js"></script>
+  <script src="//localhost:35729/livereload.js"></script>
+</body>

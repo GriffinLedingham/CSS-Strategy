@@ -1,0 +1,20 @@
+{
+  "name": "Express-server",
+  "version": "0.0.0",
+  "authors": [
+    "Griffin Ledingham"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "*",
+    "jquery": "*",
+    "handlebars": "*"
+  }
+}
